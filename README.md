@@ -1,16 +1,19 @@
 # music_artist_app_osman
 
-A new Flutter project.
+This App shows details of the music Artist . It is built with flutter framework .
+- StateManagement :- For StateManagement I've used "flutter_bloc" as given in the task. 
+- Responsive UI :- For reponsive UI I've used "flutter_screenutil" package .
+- Features :-  
+- Internet Connectivity Check . For this Feature I've used "internet_connection_checker" Package . On no connection It shows a beautiful vector Image .
+- Ratings :- For Ratings of the Artist I've used "flutter_rating_bar" Package.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pacakges Used :-
+- flutter_bloc: ^8.0.1
+- flutter_conditional_rendering: ^2.0.0
+- flutter_launcher_icons: ^0.9.3
+- flutter_rating_bar: ^4.0.1
+- flutter_screenutil: ^5.5.3+2
+- flutter_svg: ^1.0.3
+- google_fonts: ^3.0.1
+- http: ^0.13.4
+- internet_connection_checker: ^0.0.1+3
