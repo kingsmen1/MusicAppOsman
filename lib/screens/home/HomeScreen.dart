@@ -24,7 +24,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool isConnected = true;
+  bool isConnected = false;
   StreamSubscription? InternetSubscription;
 
   @override
