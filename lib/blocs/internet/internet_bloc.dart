@@ -19,14 +19,17 @@ class InternetBloc extends Bloc<InternetEvent, InternetState> {
   }
 
   _loadInternet(loadInternet event, Emitter<InternetState> emit) {
+    print('loainternet');
     InternetSubscription?.cancel();
     InternetSubscription =
         _internetConnectionChecker.onStatusChange.listen((event) {
       final isConnected = event == InternetConnectionStatus.connected;
       if (isConnected) {
         add(EmitConnected());
+        print('EmitConnected');
       } else {
         add(EmitNotConnected());
+        print('EmitNotConnected');
       }
     });
   }

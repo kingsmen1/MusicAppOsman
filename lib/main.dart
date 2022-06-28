@@ -20,7 +20,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (_) =>
                 InternetBloc(InternetConnectionChecker())..add(loadInternet())),
-        BlocProvider(create: (_) => ArtistBloc(artistrepo: ArtistRepo()))
+        BlocProvider(
+            create: (_) =>
+                ArtistBloc(artistrepo: ArtistRepo())..add(LoadArtist()))
       ],
       child: ScreenUtilInit(
         designSize: const Size(375, 812),

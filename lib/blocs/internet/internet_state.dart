@@ -9,18 +9,6 @@ abstract class InternetState extends Equatable {
 
 class InternetLoading extends InternetState {}
 
-class connected extends InternetState {
-  // final bool isConnected;
+class connected extends InternetState {}
 
-  // connected({required this.isConnected});
-  // @override
-  // List<Object> get props => [isConnected];
-}
-
-class disconnected extends InternetState {
-  // final bool isConnected;
-
-  // disconnected({required this.isConnected});
-  // @override
-  // List<Object> get props => [disconnected];
-}
+class disconnected extends InternetState {}

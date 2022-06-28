@@ -20,6 +20,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
+  void initState() {
+    super.initState();
+    //context.read<InternetBloc>().add(loadInternet());
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocBuilder<InternetBloc, InternetState>(
       builder: (context, state) {
@@ -28,7 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
         }
         if (state is disconnected) {
           return const NoInternet();
-        } else {
+        }
+        if (state is connected) {
           return BlocBuilder<ArtistBloc, ArtisBlocState>(
               builder: (context, state) {
             if (state is ArtistLoading) {
@@ -83,6 +90,8 @@ class _HomeScreenState extends State<HomeScreen> {
               return Scaffold(body: error());
             }
           });
+        } else {
+          return Scaffold(body: error());
         }
       },
     );

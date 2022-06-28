@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<ArtistBloc>().add(LoadArtist());
+    //context.read<ArtistBloc>().add(LoadArtist());
   }
 
   @override

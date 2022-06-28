@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_conditional_rendering/conditional.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:music_artist_app_osman/utils/utils.dart';
 import 'package:music_artist_app_osman/widgets/top_rounded_container.dart';
 
@@ -18,25 +16,6 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  bool isConnectted = false;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _internetCheck(InternetConnectionChecker());
-  }
-
-  void _internetCheck(InternetConnectionChecker internetConnectionChecker) {
-    print('function played');
-    internetConnectionChecker.onStatusChange.listen((event) {
-      final isConnected = event == InternetConnectionStatus.connected;
-      setState(() {
-        isConnectted = isConnected;
-      });
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
