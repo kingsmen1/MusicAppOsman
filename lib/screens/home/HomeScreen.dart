@@ -20,12 +20,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
-  void initState() {
-    super.initState();
-    //context.read<InternetBloc>().add(loadInternet());
-  }
-
-  @override
   Widget build(BuildContext context) {
     return BlocBuilder<InternetBloc, InternetState>(
       builder: (context, state) {

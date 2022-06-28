@@ -16,12 +16,6 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    super.initState();
-    //context.read<ArtistBloc>().add(LoadArtist());
-  }
-
-  @override
   Widget build(BuildContext context) {
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context,
