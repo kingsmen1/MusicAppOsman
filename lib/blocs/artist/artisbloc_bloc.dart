@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
 import 'package:music_artist_app_osman/repository/artist_repo.dart';
 
 import '../../models/artist.dart';
@@ -19,6 +18,7 @@ class ArtistBloc extends Bloc<ArtisblocEvent, ArtisBlocState> {
   _loadArtist(LoadArtist event, Emitter<ArtisBlocState> emit) async {
     emit(ArtistLoading());
     final artistList = await _artistRepo.getArtist();
+
     emit(ArtistLoaded(artistList: artistList));
   }
 }

@@ -3,8 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:music_artist_app_osman/blocs/bloc/artisbloc_bloc.dart';
 import 'package:music_artist_app_osman/screens/home/HomeScreen.dart';
+
+import '../../blocs/artist/artisbloc_bloc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
